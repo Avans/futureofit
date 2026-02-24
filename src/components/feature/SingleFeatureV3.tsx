@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+
 
 interface DataType {
     id: number;
@@ -7,7 +7,7 @@ interface DataType {
     text: string;
 }
 const SingleFeatureV3 = ({ feature }: { feature: DataType }) => {
-    const { id, iconClass, title, text } = feature;
+    const { iconClass, title, text } = feature;
 
     return (
         <>
@@ -16,13 +16,14 @@ const SingleFeatureV3 = ({ feature }: { feature: DataType }) => {
             </div>
             <div className="content">
                 <h3 className="title">
-                    <Link to={`/service-single/${id}`}>{title}</Link>
+                    {title}
+                    {/* <Link to={`/service-single/${id}`}>{title}</Link> */}
                 </h3>
                 <div className="text">{text}</div>
             </div>
-            <Link to={`/service-single/${id}`} className="read-more">
+            {/* <Link to={`/service-single/${id}`} className="read-more">
                 <i className="icon fas fa-angle-right" />
-            </Link>
+            </Link> */}
         </>
     );
 };

@@ -24,7 +24,7 @@ const SpeakerV1 = () => {
                     <div className="sec-title light text-center">
                         <span className="sub-title">Events Speakers</span>
                         <AnimatedText>
-                            World Class Speakers <br /> For Conference
+                           De gastsprekers van deze editie:
                         </AnimatedText>
                     </div>
                     <div className="row">
@@ -45,7 +45,7 @@ const SpeakerV1 = () => {
 
                     <div className="btn-box text-center">
                         <Link to="/contact" className="theme-btn btn-style-one bg-yellow">
-                            <span className="btn-title">Registration Now</span>
+                            <span className="btn-title">Registreren</span>
                         </Link>
                     </div>
                 </div>

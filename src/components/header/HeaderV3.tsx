@@ -3,10 +3,8 @@ import HeaderTopV3 from './HeaderTopV3';
 import MainMenu from './MainMenu';
 import MobileMenu from './MobileMenu';
 import useStickyMenu from '../../hooks/useStickyMenu';
-import useSearchBar from '../../hooks/useSearchBar';
 import useSidebar from '../../hooks/useSidebar';
 import useMobileMenu from '../../hooks/useMobileMenu';
-import SearchPopup from "./SearchPopup";
 import SidebarV1 from "./SidebarV1";
 
 interface DataType {
@@ -17,7 +15,6 @@ interface DataType {
 const HeaderV3 = ({ headerStyle, parentMenu }: DataType) => {
 
     const isSticky = useStickyMenu();
-    const { openSearch, toggle: searchToggle, close: searchClose } = useSearchBar();
     const { openSidebar, toggle: sidebarToggle, close: sidebarClose } = useSidebar();
     const { openMenu, toggle: mobileToggle, close: handleCloseMenu, toggleMenuItem, isMenuItemOpen } = useMobileMenu();
 
@@ -34,7 +31,7 @@ const HeaderV3 = ({ headerStyle, parentMenu }: DataType) => {
                         <div className='main-box'>
                             <div className="logo-box">
                                 <div className="logo">
-                                    <Link to="/"><img src="/images/logo-2.svg" alt="image" /></Link>
+                                    <Link to="/"><img src="/images/logo_fit_zwart.svg" alt="image" /></Link>
                                 </div>
                             </div>
                             <div className="header-navbar">
@@ -48,15 +45,12 @@ const HeaderV3 = ({ headerStyle, parentMenu }: DataType) => {
                                     </nav>
 
                                     <div className="outer-box">
-                                        <button className="ui-btn search-btn" onClick={searchToggle}>
-                                            <i className="icon flaticon-search"></i>
-                                        </button>
                                         <button className="ui-btn toggle-hidden-bar" onClick={sidebarToggle}>
                                             <i className="icon flaticon-menu-2"></i>
                                         </button>
                                         <div className="btn-box">
-                                            <Link to="/pricing" className="theme-btn btn-style-one dark-bg">
-                                                <span className="btn-title">Get Tickets</span>
+                                            <Link to="/registreren" className="theme-btn btn-style-one dark-bg">
+                                                <span className="btn-title">Registreren</span>
                                             </Link>
                                         </div>
 
@@ -77,7 +71,7 @@ const HeaderV3 = ({ headerStyle, parentMenu }: DataType) => {
             </header>
 
 
-            <SearchPopup openSearch={openSearch} searchClose={searchClose} />
+           
             <SidebarV1 openSidebar={openSidebar} sidebarClose={sidebarClose} />
         </>
     );

@@ -4475,7 +4475,7 @@ Main Header
   padding: 18px 10px 15px 10px;
   background-color: var(--theme-color-light);
   border-radius: 100px 20px 20px 100px;
-  border-right: 6px solid var(--theme-color4);
+  border-right: 6px solid var(--theme-color3);
 }
 
 @media (max-width: 991.98px) {
@@ -5706,7 +5706,7 @@ Main Header
   line-height: 1em;
   font-weight: 400;
   font-family: var(--fa-style-family, "Font Awesome 6 Pro");
-  content: "\f130";
+  /* content: "\f130"; */
 }
 
 .rtl .sec-title .sub-title:after {
@@ -15441,6 +15441,7 @@ Main Header
 
 .speaker-block .inner-box .info-box .name {
   position: relative;
+  font-size: 20px;
   font-weight: 700;
   color: var(--theme-color-light);
   margin-bottom: 0;
@@ -18776,7 +18777,7 @@ Main Header
 
 .main-footer .widgets-section {
   position: relative;
-  padding: 250px 0 50px;
+  padding: 150px 0 50px;
 }
 
 .main-footer .footer-column {
@@ -19548,7 +19549,7 @@ Main Header
 }
 
 .footer-style-two .widgets-section {
-  padding-top: 300px;
+
   padding-bottom: 65px;
 }
 

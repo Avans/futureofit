@@ -9,9 +9,8 @@ const HeaderTopV2 = () => {
                         <div className="icon-seventeen"></div>
                         <div className="icon-eighteen"></div>
                         <ul className="contact-list">
-                            <li><span className="bold">Address:</span> 30 Bridge, Brooklyn street, USA.</li>
+                            <li><span className="bold"></span> Onderwijsboulevard 215, 's Hertogenbosch</li>
                         </ul>
-
                         <ul className="social-icon">
                             <SocialV1 />
                         </ul>

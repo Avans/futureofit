@@ -4,7 +4,7 @@ import ClientV2 from "../../components/clients/ClientV2";
 import FaqV1 from "../../components/faq/FaqV1";
 import FooterV2 from "../../components/footer/FooterV2";
 import GalleryV2 from "../../components/gallery/GalleryV2";
-import HeaderV2 from "../../components/header/HeaderV2";
+import HeaderV3 from "../../components/header/HeaderV3";
 import TestimonialV1 from "../../components/testimonials/TestimonialV1";
 import PageSocial from "../../components/utilities/PageSocial";
 
@@ -16,7 +16,7 @@ const FaqPage = () => {
             </Helmet>
 
             <div className="page-wrapper">
-                <HeaderV2 parentMenu="about" />
+                <HeaderV3 parentMenu="about" />
                 <BreadCrumb title="Faq's" />
                 <FaqV1 sectionClass="two" />
                 <ClientV2 />

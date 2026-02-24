@@ -19,7 +19,14 @@ const Home3 = () => {
     return (
         <>
             <Helmet>
-                <title>Konfer - Home 3</title>
+                <title>Future of IT</title>
+                <meta name="description" content="Future of IT" />
+                <meta name="keywords" content="Future of IT" />
+                <meta name="author" content="Future of IT" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta name="robots" content="index, follow" />
+                <meta name="googlebot" content="index, follow" />
+                <meta name="google" content="notranslate" />
             </Helmet>
 
             <div className="page-wrapper">

@@ -26,9 +26,9 @@ const SingleBannerV1 = ({ banner }: { banner: DataType }) => {
                     <div className="author-box">
                         <div className="inner-box">
                             <div className="sign" data-aos="fade-up" data-aos-delay="500">
-                                <img src="/images/resource/banner-sign.png" alt="Signature" />
+                                <img src="/images/keynote/edwinvanandel_small.webp" alt="Signature" />
                             </div>
-                            <div className="designation animate-3" data-aos="fade-up" data-aos-delay="700">GUEST SPEAKER</div>
+                            <div className="designation animate-3" data-aos="fade-up" data-aos-delay="700">Edwin van Andel</div>
                             <div className="line" data-aos="fade-right" data-aos-delay="1000">
                                 <img src="/images/icons/icon-line.png" alt="Line" />
                             </div>

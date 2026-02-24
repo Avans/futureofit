@@ -16,19 +16,12 @@ const MainMenu = ({ toggleMenuItem, isMenuItemOpen, parentMenu }: DataType) => {
     return (
         <>
             <ul className="navigation clearfix">
-                <li className={`dropdown ${parentMenu === 'home' ? 'current' : ''} ${isMenuItemOpen?.('home') ? 'open' : ''}`}>
-                    <Link to="#" onClick={handleToggle('home')}>Home</Link>
-                    <ul className='sub-menu'>
-                        <li><Link to="/">Home 01</Link></li>
-                        <li><Link to="/home-2">Home 02</Link></li>
-                        <li><Link to="/home-3">Home 03</Link></li>
-                    </ul>
-                    <div className="dropdown-btn" onClick={handleToggle('home')}>
-                        <span className="fa fa-angle-down"></span>
-                    </div>
-                </li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about-us">Future of IT</Link></li>
+            <li><Link to="/faqs">FAQs</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
 
-                <li className={`dropdown ${parentMenu === 'about' ? 'current' : ''} ${isMenuItemOpen?.('pages') ? 'open' : ''}`}>
+                {/* <li className={`dropdown ${parentMenu === 'about' ? 'current' : ''} ${isMenuItemOpen?.('pages') ? 'open' : ''}`}>
                     <Link to="#" onClick={handleToggle('pages')}>Pages</Link>
                     <div className="mega-menu sub-menu">
                         <div className="mega-menu-bar row">
@@ -83,9 +76,9 @@ const MainMenu = ({ toggleMenuItem, isMenuItemOpen, parentMenu }: DataType) => {
                     <div className="dropdown-btn" onClick={handleToggle('speakers')}>
                         <span className="fa fa-angle-down"></span>
                     </div>
-                </li>
+                </li> */}
 
-                <li className={`dropdown ${parentMenu === 'blogs' ? 'current' : ''} ${isMenuItemOpen?.('blogs') ? 'open' : ''}`}>
+                {/* <li className={`dropdown ${parentMenu === 'blogs' ? 'current' : ''} ${isMenuItemOpen?.('blogs') ? 'open' : ''}`}>
                     <Link to="#" onClick={handleToggle('blogs')}>Blogs</Link>
                     <ul className='sub-menu'>
                         <li><Link to="/blogs">Blogs</Link></li>
@@ -95,9 +88,9 @@ const MainMenu = ({ toggleMenuItem, isMenuItemOpen, parentMenu }: DataType) => {
                     <div className="dropdown-btn" onClick={handleToggle('blogs')}>
                         <span className="fa fa-angle-down"></span>
                     </div>
-                </li>
+                </li> */}
 
-                <li><Link to="/contact">Contact</Link></li>
+               
             </ul>
         </>
     );

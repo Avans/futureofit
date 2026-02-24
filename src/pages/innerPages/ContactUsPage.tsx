@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import BreadCrumb from "../../components/breadCrumb/BreadCrumb";
 import ContactPageContent from "../../components/contact/ContactPageContent";
 import FooterV3 from "../../components/footer/FooterV3";
-import HeaderV2 from "../../components/header/HeaderV2";
+import HeaderV3 from "../../components/header/HeaderV3";
 import PageSocial from "../../components/utilities/PageSocial";
 
 const ContactUsPage = () => {
@@ -13,7 +13,7 @@ const ContactUsPage = () => {
             </Helmet>
 
             <div className="page-wrapper">
-                <HeaderV2 parentMenu="about" />
+                <HeaderV3 parentMenu="about" />
                 <BreadCrumb title="Contact Us" subtitle="contact us" />
                 <ContactPageContent />
                 <FooterV3 />

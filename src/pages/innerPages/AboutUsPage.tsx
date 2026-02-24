@@ -6,7 +6,7 @@ import CountdownV1 from "../../components/counter/CountdownV1";
 import FactV1 from "../../components/fact/FactV1";
 import FaqV1 from "../../components/faq/FaqV1";
 import FeatureV2 from "../../components/feature/FeatureV2";
-import FooterV3 from "../../components/footer/FooterV3";
+import FooterV2 from "../../components/footer/FooterV2";
 import HeaderV3 from "../../components/header/HeaderV3";
 import MarqueeV1 from "../../components/marquee/MarqueeV1";
 import SpeakerV4 from "../../components/speakers/SpeakerV4";
@@ -17,23 +17,19 @@ const AboutUsPage = () => {
     return (
         <>
             <Helmet>
-                <title>Konfer - About Us</title>
+                <title>Over Future of IT</title>
             </Helmet>
 
             <div className="page-wrapper">
                 <HeaderV3 parentMenu="about" />
-                <BreadCrumb title="About Us" subtitle="About Us" />
+                <BreadCrumb title="Future of IT" subtitle="Future of IT" />
                 <AboutV1 />
                 <MarqueeV1 />
                 <CountdownV1 />
-                <FeatureV2 />
-                <SpeakerV4 />
-                <FactV1 />
-                <ClientV2 />
-                <TestimonialV3 />
-                <FaqV1 />
-                <FooterV3 />
-                <PageSocial />
+                {/* <FeatureV2 />
+                <FactV1 /> */}
+                <FooterV2 />
+              
             </div>
         </>
     );
