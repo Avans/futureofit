@@ -1,10 +1,5 @@
 import { Link } from "react-router-dom";
 import SocialV1 from "../social/SocialV1";
-import { toast } from "react-toastify";
-
-interface FormEventHandler {
-    (event: React.FormEvent<HTMLFormElement>): void;
-}
 
 const FooterV2 = () => {
 

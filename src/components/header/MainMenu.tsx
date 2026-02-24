@@ -1,17 +1,18 @@
 import { Link } from "react-router-dom";
 
-interface DataType {
-    toggleMenuItem?: (menuId: string) => void;
-    isMenuItemOpen?: (menuId: string) => boolean;
-    parentMenu?: string;
-}
+// interface DataType {
+//     toggleMenuItem?: (menuId: string) => void;
+//     isMenuItemOpen?: (menuId: string) => boolean;
+//     parentMenu?: string;
+// }
 
-const MainMenu = ({ toggleMenuItem, isMenuItemOpen, parentMenu }: DataType) => {
-    const handleToggle = (menuId: string) => (e: React.MouseEvent) => {
-        e.preventDefault();
-        e.stopPropagation();
-        toggleMenuItem?.(menuId);
-    };
+const MainMenu = () => {
+   
+    // const handleToggle = (menuId: string) => (e: React.MouseEvent) => {
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     toggleMenuItem?.(menuId);
+    // };
 
     return (
         <>

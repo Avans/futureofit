@@ -1,17 +1,11 @@
 import { Helmet } from "react-helmet-async";
 import AboutV1 from "../../components/about/AboutV1";
 import BreadCrumb from "../../components/breadCrumb/BreadCrumb";
-import ClientV2 from "../../components/clients/ClientV2";
 import CountdownV1 from "../../components/counter/CountdownV1";
-import FactV1 from "../../components/fact/FactV1";
-import FaqV1 from "../../components/faq/FaqV1";
-import FeatureV2 from "../../components/feature/FeatureV2";
 import FooterV2 from "../../components/footer/FooterV2";
 import HeaderV3 from "../../components/header/HeaderV3";
 import MarqueeV1 from "../../components/marquee/MarqueeV1";
-import SpeakerV4 from "../../components/speakers/SpeakerV4";
-import TestimonialV3 from "../../components/testimonials/TestimonialV3";
-import PageSocial from "../../components/utilities/PageSocial";
+
 
 const AboutUsPage = () => {
     return (

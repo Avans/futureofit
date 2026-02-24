@@ -12,7 +12,7 @@ interface DataType {
     parentMenu?: string;
 }
 
-const HeaderV3 = ({ headerStyle, parentMenu }: DataType) => {
+const HeaderV3 = ({ headerStyle }: DataType) => {
 
     const isSticky = useStickyMenu();
     const { openSidebar, toggle: sidebarToggle, close: sidebarClose } = useSidebar();
@@ -41,7 +41,7 @@ const HeaderV3 = ({ headerStyle, parentMenu }: DataType) => {
                                     </div>
 
                                     <nav className="nav main-menu navbar-expand-lg navbar-light">
-                                        <MainMenu parentMenu={parentMenu} />
+                                        <MainMenu  />
                                     </nav>
 
                                     <div className="outer-box">

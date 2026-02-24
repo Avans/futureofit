@@ -9,7 +9,7 @@ interface DataType {
     isMenuItemOpen: (menuId: string) => boolean;
 }
 
-const MobileMenu = ({ openMenu, handleCloseMenu, toggleMenuItem, isMenuItemOpen }: DataType) => {
+const MobileMenu = ({ openMenu, handleCloseMenu, }: DataType) => {
     return (
         <>
             <div className={`${openMenu ? "mobile-menu-visible" : ""}`}>
@@ -29,8 +29,8 @@ const MobileMenu = ({ openMenu, handleCloseMenu, toggleMenuItem, isMenuItemOpen 
                             </div>
                         </div>
                         <MainMenu
-                            toggleMenuItem={toggleMenuItem}
-                            isMenuItemOpen={isMenuItemOpen}
+                            // toggleMenuItem={toggleMenuItem}
+                            // isMenuItemOpen={isMenuItemOpen}
                         />
                         <ul className="contact-list-one">
                             <li>

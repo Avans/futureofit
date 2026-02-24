@@ -14,7 +14,7 @@ interface DataType {
     parentMenu?: string;
 }
 
-const HeaderV2 = ({ headerStyle, parentMenu }: DataType) => {
+const HeaderV2 = ({ headerStyle }: DataType) => {
 
     const isSticky = useStickyMenu();
     const { openSearch, toggle: searchToggle, close: searchClose } = useSearchBar();
@@ -49,7 +49,7 @@ const HeaderV2 = ({ headerStyle, parentMenu }: DataType) => {
                                     </div>
                                     <nav className="main-menu navbar-expand-lg navbar-light">
                                         <div className="collapse navbar-collapse clearfix" id="navbarSupportedContent">
-                                            <MainMenu parentMenu={parentMenu} />
+                                            <MainMenu />
                                         </div>
                                     </nav>
 
