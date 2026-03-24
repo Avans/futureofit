@@ -14,16 +14,16 @@ const TimeV1 = ({ expiryTimestamp }: DataType) => {
     return (
         <div className="time-countdown clearfix">
             <div className="counter-column">
-                <span className="count">{days <= 9 ? `0${days}` : days}</span>Days
+                <span className="count">{days <= 9 ? `0${days}` : days}</span>Dagen
             </div>
             <div className="counter-column">
-                <span className="count">{hours <= 9 ? `0${hours}` : hours}</span>Hours
+                <span className="count">{hours <= 9 ? `0${hours}` : hours}</span>Uren
             </div>
             <div className="counter-column">
-                <span className="count">{minutes <= 9 ? `0${minutes}` : minutes}</span> Minutes
+                <span className="count">{minutes <= 9 ? `0${minutes}` : minutes}</span> Minuten
             </div>
             <div className="counter-column">
-                <span className="count">{seconds <= 9 ? `0${seconds}` : seconds}</span> Second
+                <span className="count">{seconds <= 9 ? `0${seconds}` : seconds}</span> Seconden
             </div>
         </div>
     );

@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import SplitText from '../animation/SplitText.jsx';
+import { REGISTER_URL } from "../../config";
 
 interface DataType {
     id: number;
@@ -74,9 +74,9 @@ const SingleBannerV1 = ({ banner }: { banner: DataType }) => {
                             {address}
                         </div>
                         <div className="btn-box">
-                            <Link to="/contact" className="theme-btn btn-style-one bg-yellow">
+                            <a href={REGISTER_URL} target="_blank" rel="noopener noreferrer" className="theme-btn btn-style-one bg-yellow">
                                 <span className="btn-title">{buttonText}</span>
-                            </Link>
+                            </a>
                         </div>
                     </div>
                 </div>
