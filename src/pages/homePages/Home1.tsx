@@ -1,7 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import AboutV1Home from "../../components/about/AboutV1-home";
 import BannerV1 from "../../components/banner/BannerV1";
-import ClientV1 from "../../components/clients/ClientV1";
 import FeatureV3 from "../../components/feature/FeatureV3";
 import FooterV2 from "../../components/footer/FooterV2";
 import GalleryV1 from "../../components/gallery/GalleryV1";
