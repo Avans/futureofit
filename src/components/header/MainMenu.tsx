@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 // }
 
 const MainMenu = () => {
-   
+
     // const handleToggle = (menuId: string) => (e: React.MouseEvent) => {
     //     e.preventDefault();
     //     e.stopPropagation();
@@ -17,10 +17,10 @@ const MainMenu = () => {
     return (
         <>
             <ul className="navigation clearfix">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about-us">Future of IT</Link></li>
-            <li><Link to="/faqs">FAQs</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/about-us">Future of IT</Link></li>
+                {/* <li><Link to="/faqs">FAQs</Link></li>
+            <li><Link to="/contact">Contact</Link></li> */}
 
                 {/* <li className={`dropdown ${parentMenu === 'about' ? 'current' : ''} ${isMenuItemOpen?.('pages') ? 'open' : ''}`}>
                     <Link to="#" onClick={handleToggle('pages')}>Pages</Link>
@@ -91,7 +91,7 @@ const MainMenu = () => {
                     </div>
                 </li> */}
 
-               
+
             </ul>
         </>
     );

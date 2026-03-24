@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import SocialV1 from "../social/SocialV1";
 
 interface DataType {
     openSidebar: boolean;
@@ -23,28 +22,28 @@ const SidebarV1 = ({ openSidebar, sidebarClose }: DataType) => {
                         <div className="close-btn" onClick={sidebarClose}><i className="icon fa fa-times"></i></div>
                     </div>
                     <div className="text-box">
-                        <h4 className="title">Transforming your ideas into digital reality</h4>
-                        <div className="text">Sed ut perspiciatis unde omnis natus error voluptatem santium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab nllo inventore veritatis quasi architecto beatae vitae</div>
+                        <h4 className="title">Avans Hogeschool <br />'s-Hertogenbosch</h4>
+                        <div className="text">De Academie voor Techniek en Design (ATD) organiseert jaarlijks het Future of IT evenement. Dit evenement brengt studenten, docenten, onderzoekers en professionals uit de IT-sector samen om kennis te delen, te discussiëren en te netwerken.</div>
                     </div>
                     <ul className="contact-list-one">
                         <li>
                             <i className="icon lnr-icon-phone-handset"></i>
-                            <span className="title">Call Now</span>
-                            <div className="text"><a href="tel:+250327101235">+25 032 7101235</a></div>
+                            <span className="title">Meer info? Monique Putters staat je graag te woord.</span>
+                            <div className="text"><a href="tel:+250327101235">+31885256125</a></div>
                         </li>
                         <li>
                             <i className="icon lnr-icon-envelope1"></i>
-                            <span className="title">Send Email</span>
-                            <div className="text"><a href="mailto:confer@hotmail.com">confer@hotmail.com</a></div>
+                            <span className="title">E-mail</span>
+                            <div className="text"><a href="mailto:mfm.putters@avans.nl">mfm.putters@avans.nl</a></div>
                         </li>
                         <li>
                             <i className="icon lnr-icon-map-marker"></i>
-                            <span className="title">Address</span>
-                            <div className="text">30 Bridge, Brooklyn street, <br /> United State of America.</div>
+                            <span className="title">Adres</span>
+                            <div className="text">Avans Hogeschool <br /> Onderwijsboulevard 215 <br /> 5223 DE 's-Hertogenbosch</div>
                         </li>
                     </ul>
                     <ul className="social-links">
-                        <SocialV1 />
+                        {/* <SocialV1 /> */}
                     </ul>
                 </div>
             </div>

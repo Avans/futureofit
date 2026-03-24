@@ -17,8 +17,8 @@ const AboutV1 = () => {
                                 <div className="icon-twenty" />
                             </div>
                             <div className="speaker-box">
-                                <i className="icon flaticon-mic" />
-                                <div className="count">10</div>
+
+                                <div className="count">10+</div>
                                 <div className="text">Inspirerende <br /> Sprekers</div>
                             </div>
                         </div>
@@ -38,7 +38,12 @@ const AboutV1 = () => {
                                 <AnimatedText>
                                     Cybersecurity is the future.
                                 </AnimatedText>
-                                <div className="text text-anim">Het thema van deze editie is 'Cybersecurity'.</div>
+                                <div className="text text-anim">
+                                    Elke regel code die je tikt, kan zomaar de volgende vulnerability wezen.<br />
+                                    Tijdens deze editie duiken we in de nieuwste cybersecurity hacks en tricks.<br />
+                                    Ontdek hoe jij systemen waterdicht maakt en aanvallers een stap voor blijft.<br />
+                                    Level up je IT-skills en word dé security expert die elk bedrijf zoekt!
+                                </div>
                             </div>
                             {/* <div className="btn-box">
                                 <Link to="/pricing" className="theme-btn btn-style-one icon-btn bg-yellow">

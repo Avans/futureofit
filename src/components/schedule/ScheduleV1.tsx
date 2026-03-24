@@ -2,6 +2,7 @@ import ScheduleList from "./ScheduleList";
 import ScheduleListV1Data from "../../assets/jsonData/schedule/ScheduleListV1Data.json";
 import ScheduleV1Data from "../../assets/jsonData/schedule/ScheduleV1Data.json"
 import { Link } from "react-router-dom";
+import { REGISTER_URL } from "../../config";
 import AnimatedText from "../animation/AnimatedText";
 
 const ScheduleV1 = () => {
@@ -14,9 +15,9 @@ const ScheduleV1 = () => {
                 </div>
                 <div className="auto-container">
                     <div className="sec-title text-center">
-                        <span className="sub-title">About Conference</span>
+                        <span className="sub-title">Programma</span>
                         <AnimatedText>
-                            Schedule Plan
+                            Overzicht
                         </AnimatedText>
                     </div>
                     <div className="schedule-tabs tabs-box">
@@ -51,9 +52,9 @@ const ScheduleV1 = () => {
                                                                     <Link to={`/event-single/${block.id}`}>{block.title}</Link>
                                                                 </h4>
                                                                 <div className="text">{block.text}</div>
-                                                                <div className="btn-box">
+                                                                {/* <div className="btn-box">
                                                                     <Link to={`/event-single/${block.id}`} className="theme-btn">{block.btnText}</Link>
-                                                                </div>
+                                                                </div> */}
                                                             </div>
                                                         </div>
                                                     </div>
@@ -63,6 +64,12 @@ const ScheduleV1 = () => {
                                     </div>)
                             })}
                         </div>
+                    </div>
+
+                    <div className="btn-box text-center mt-5">
+                        <a href={REGISTER_URL} target="_blank" rel="noopener noreferrer" className="theme-btn btn-style-one bg-yellow">
+                            <span className="btn-title">Registreren</span>
+                        </a>
                     </div>
                 </div>
             </section>

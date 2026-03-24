@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { REGISTER_URL } from "../../config";
 import Typewriter, { TypewriterClass } from 'typewriter-effect';
 
 const BannerV3 = () => {
@@ -40,9 +40,9 @@ const BannerV3 = () => {
                                 </h1>
                             </div>
                             <div className="btn-box hide-xxl" data-aos="fade-right" data-aos-delay="500">
-                                <Link to="/pricing" className="theme-btn btn-style-one bg-orange">
+                                <a href={REGISTER_URL} target="_blank" rel="noopener noreferrer" className="theme-btn btn-style-one bg-orange">
                                     <span className="btn-title">Registration Now</span>
-                                </Link>
+                                </a>
                             </div>
                         </div>
                         <div className="image-box">
@@ -56,9 +56,9 @@ const BannerV3 = () => {
                             </div>
                         </div>
                         <div className="btn-box show-xxl" data-aos="fade-right" data-aos-delay="3000">
-                            <Link to="/contact" className="theme-btn btn-style-one bg-yellow">
+                            <a href={REGISTER_URL} target="_blank" rel="noopener noreferrer" className="theme-btn btn-style-one bg-yellow">
                                 <span className="btn-title">Registration Now</span>
-                            </Link>
+                            </a>
                         </div>
                     </div>
                 </div>

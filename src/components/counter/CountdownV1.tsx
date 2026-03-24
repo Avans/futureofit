@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { REGISTER_URL } from "../../config";
 import { useMemo } from 'react';
 import AnimatedText from "../animation/AnimatedText";
 import TimeV2 from "./TimeV2";
@@ -32,9 +32,9 @@ const CountdownV1 = () => {
                             </div>
 
                             <div className="btn-box col-xl-4 col-lg-12 col-md-12 col-sm-12">
-                                <Link to="/pricing" className="theme-btn btn-style-one bg-blue">
+                                <a href={REGISTER_URL} target="_blank" rel="noopener noreferrer" className="theme-btn btn-style-one bg-blue">
                                     <span className="btn-title">Registeren</span>
-                                </Link>
+                                </a>
                             </div>
                         </div>
                         <figure className="image bounce-x">

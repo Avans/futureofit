@@ -1,4 +1,4 @@
-import SocialV1 from "../social/SocialV1";
+
 
 const HeaderTopV2 = () => {
     return (
@@ -12,7 +12,7 @@ const HeaderTopV2 = () => {
                             <li><span className="bold"></span> Onderwijsboulevard 215, 's Hertogenbosch</li>
                         </ul>
                         <ul className="social-icon">
-                            <SocialV1 />
+                            {/* <SocialV1 /> */}
                         </ul>
                     </div>
                 </div>

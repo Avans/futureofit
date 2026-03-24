@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { REGISTER_URL } from "../../config";
 import HeaderTopV3 from './HeaderTopV3';
 import MainMenu from './MainMenu';
 import MobileMenu from './MobileMenu';
@@ -49,9 +50,9 @@ const HeaderV3 = ({ headerStyle }: DataType) => {
                                             <i className="icon flaticon-menu-2"></i>
                                         </button>
                                         <div className="btn-box">
-                                            <Link to="/registreren" className="theme-btn btn-style-one dark-bg">
+                                            <a href={REGISTER_URL} target="_blank" rel="noopener noreferrer" className="theme-btn btn-style-one dark-bg">
                                                 <span className="btn-title">Registreren</span>
-                                            </Link>
+                                            </a>
                                         </div>
 
                                     </div>

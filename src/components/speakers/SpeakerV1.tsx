@@ -1,7 +1,7 @@
 import AnimatedText from "../animation/AnimatedText";
 import speakersV1Data from '../../assets/jsonData/speakers/speakersV1Data.json'
 import SingleSpeakerV1 from "./SingleSpeakerV1";
-import { Link } from "react-router-dom";
+import { REGISTER_URL } from "../../config";
 import { useState } from "react";
 
 const SpeakerV1 = () => {
@@ -44,9 +44,9 @@ const SpeakerV1 = () => {
                     </div>
 
                     <div className="btn-box text-center">
-                        <Link to="/contact" className="theme-btn btn-style-one bg-yellow">
+                        <a href={REGISTER_URL} target="_blank" rel="noopener noreferrer" className="theme-btn btn-style-one bg-yellow">
                             <span className="btn-title">Registreren</span>
-                        </Link>
+                        </a>
                     </div>
                 </div>
             </section>
