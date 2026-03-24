@@ -6148,6 +6148,7 @@ Main Header
   position: relative;
   color: var(--theme-color-light);
   margin-bottom: 40px;
+  font-family: 'Electrolize', sans-serif;
 }
 
 @media (max-width: 1399.98px) {

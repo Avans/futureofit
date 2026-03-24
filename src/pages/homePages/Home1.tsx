@@ -26,7 +26,7 @@ const Home1 = () => {
         <SpeakerV1 />
         <ScheduleV1 />
         <GalleryV1 />
-        <ClientV1 sectionClass="pt-0" />
+        {/* <ClientV1 sectionClass="pt-0" /> */}
         <FooterV2 />
       </div>
     </>

@@ -38,7 +38,7 @@ const AboutV1 = () => {
                                 <AnimatedText>
                                     Communitydag voor studenten in de IT-sector.
                                 </AnimatedText>
-                                <div className="text text-anim">Elk jaar wordt er hard gewerkt om een inspiratief maar vooral gezellig evenement te organiseren voor studenten in de IT-sector. Dit is het moment om kennis te delen en samen te leren vanuit de praktijk. ....||TODO||</div>
+                                <div className="text text-anim">Elk jaar wordt er hard gewerkt om een inspiratief maar vooral gezellig evenement te organiseren voor studenten in de IT-sector. Dit is het moment om kennis te delen en samen te leren vanuit de praktijk.</div>
                             </div>
                             {/* <div className="btn-box">
                                 <Link to="/pricing" className="theme-btn btn-style-one icon-btn bg-yellow">

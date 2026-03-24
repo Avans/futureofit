@@ -2,15 +2,15 @@
     {
         "id": 1,
         "iconClass": "icon flaticon-hall",
-        "title": "Deep Dive",
-        "text": "Ochtendprogramme staat in het teken van een deep dive in cyberbeveiliging.",
+        "title": "Brainshots",
+        "text": "Ochtendprogramma vol informatie en inspiratie.",
         "delay": 0
     },
     {
         "id": 2,
         "iconClass": "icon flaticon-art-show",
         "title": "Keynote",
-        "text": "Inspirirende spreker op het gebied van cyberbeveiliging.",
+        "text": "Inspirerende spreker op het gebied van cyberbeveiliging.",
         "delay": 200
     },
     {
@@ -24,7 +24,7 @@
         "id": 4,
         "iconClass": "icon flaticon-networking",
         "title": "Playground",
-        "text": "Vanalles te beleven op de playgound. Van lego challenges tot retro games.",
+        "text": "Vanalles te beleven op de playgound. Van VR Arena tot Escape Room.",
         "delay": 600
     },
     {

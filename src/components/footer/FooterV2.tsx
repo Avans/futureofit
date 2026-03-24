@@ -22,7 +22,7 @@ const FooterV2 = () => {
                                                 <img src="/images/logo_fit_zwart.svg" alt="Logo" />
                                             </Link>
                                         </div>
-                                        <div className="text">Een jaarlijks evenement over de toekomst van de IT voor studenten die zich richten op de IT-sector. Initiatief van Avans ICT, 's Hertogenbosch.<br/>Aanmelden als bedrijf / spreker voor een volgende editie?<br></br></div>
+                                        <div className="text">Een jaarlijks evenement over de toekomst van de IT voor studenten die zich richten op de IT-sector. Initiatief van Avans ICT, 's Hertogenbosch.<br />Aanmelden als bedrijf / spreker voor een volgende editie?<br></br></div>
                                         <div className="email-box">
                                             <a href="mailto:mfm.putters@avans.nl" className="email">E-mail naar Monique Putters</a>
                                         </div>
@@ -33,7 +33,7 @@ const FooterV2 = () => {
                                 </div>
                             </div>
 
-                            <div className="footer-column col-lg-2 col-md-6 col-sm-12">
+                            {/* <div className="footer-column col-lg-2 col-md-6 col-sm-12">
                                 <div className="footer-widget links-widget">
                                     <h4 className="widget-title">Quick Links</h4>
                                     <div className="widget-content">
@@ -42,24 +42,24 @@ const FooterV2 = () => {
                                                 <i className="fa fa-arrow-right" />
                                                 <Link to="/">Home</Link>
                                             </li>
-                                            <li>
+                                            {/* <li>
                                                 <i className="fa fa-arrow-right" />
                                                 <Link to="/about">Terms</Link>
                                             </li>
                                             <li>
                                                 <i className="fa fa-arrow-right" />
                                                 <Link to="/about">Privacy Policy</Link>
-                                            </li>
-                                        </ul>
+                                            </li> 
+                                        </ul>           
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
 
                             <div className="footer-column col-lg-3 col-md-6 col-sm-12">
                                 <div className="footer-widget newsletter-widget">
                                     <h4 className="widget-title">Adres</h4>
                                     <div className="widget-content">
-                                        {/* <div className="text">Subscribe to our newsletter & keep up with all the latest events.</div> */}
+                                        <div className="text">Avans Hogeschool</div>
                                         <div className="text">Onderwijsboulevard 215,<br /> 5223 DE, 's Hertogenbosch</div>
                                         {/* <div className="newsletter-form">
                                             <form onSubmit={handleForm}>

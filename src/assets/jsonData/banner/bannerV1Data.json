@@ -8,6 +8,7 @@
         "title": "Secure",
         "subtitle": "The Future ",
         "smallImages": [
+            "cz.png",
             "enexis_logo_92.png",
             "axians_logo_92.png",
             "infosupport_logo_92.png"
@@ -16,5 +17,4 @@
         "address": "Onderwijsboulevard 215, 's Hertogenbosch",
         "buttonText": "Registreer nu!"
     }
-   
 ]

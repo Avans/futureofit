@@ -38,7 +38,7 @@ const AboutV1 = () => {
                                 <AnimatedText>
                                     Cybersecurity is the future.
                                 </AnimatedText>
-                                <div className="text text-anim">Het thema van deze editie is 'Cybersecurity'.||TODO||</div>
+                                <div className="text text-anim">Het thema van deze editie is 'Cybersecurity'.</div>
                             </div>
                             {/* <div className="btn-box">
                                 <Link to="/pricing" className="theme-btn btn-style-one icon-btn bg-yellow">
