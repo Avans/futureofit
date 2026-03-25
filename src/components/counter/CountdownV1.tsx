@@ -5,7 +5,7 @@ import TimeV2 from "./TimeV2";
 
 const CountdownV1 = () => {
 
-    const time = useMemo(() => new Date("April 22 2026"), []);
+    const time = useMemo(() => new Date("April 22 2026 09:30:00"), []);
 
     return (
         <>
@@ -20,7 +20,7 @@ const CountdownV1 = () => {
                                 <div className="sec-title light mb-0">
                                     <span className="sub-title">Countdown</span>
                                     <AnimatedText>
-                                       The Future of IT
+                                        The Future of IT
                                     </AnimatedText>
                                 </div>
                             </div>
