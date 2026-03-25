@@ -7,7 +7,7 @@ import { Pagination } from "swiper/modules";
 
 const BannerV1 = () => {
 
-    const time = useMemo(() => new Date("April 22 2026 09:30:00"), []);
+    const time = useMemo(() => new Date("2026-04-22T09:30:00+02:00"), []);
 
     return (
         <>
