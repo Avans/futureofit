@@ -51,7 +51,7 @@
             width: 100%;
             height: 100%;
             background: url('../images/banner/bannerhome.png') center center / cover no-repeat;
-            opacity: 0.15;
+            opacity: 0.3;
             z-index: 0;
             filter: blur(2px);
         }
@@ -1016,7 +1016,7 @@
             align-items: center;
             justify-content: center;
             gap: 32px;
-            background: linear-gradient(270deg, rgba(5, 5, 16, 0.97) 60%, transparent);
+            background: linear-gradient(270deg, rgba(5, 5, 16, 1) 60%, rgba(5, 5, 16, 0.85));
             padding: 40px 0;
             border-left: 1px solid rgba(255, 255, 255, 0.05);
         }
@@ -1024,7 +1024,6 @@
         .sponsor-bar img,
         .sponsor-bar object {
             width: 200px;
-            opacity: 0.55;
             filter: brightness(1.4) grayscale(0.2);
             transition: all 0.3s ease;
             object-fit: contain;
@@ -1032,8 +1031,24 @@
 
         .sponsor-bar img:hover,
         .sponsor-bar object:hover {
-            opacity: 1;
             filter: brightness(1.6) grayscale(0);
+        }
+
+        .sponsor-bar img.sponsor-fit-logo {
+            width: 180px;
+            filter: none;
+        }
+
+        .sponsor-bar img.sponsor-fit-logo:hover {
+            filter: none;
+        }
+
+        .sponsor-bar img.sponsor-enexis {
+            width: 280px;
+        }
+
+        .sponsor-bar img.sponsor-cz {
+            width: 80px;
         }
 
         .sponsor-divider {
@@ -1053,6 +1068,7 @@
             transform: rotate(180deg);
             margin-top: 10px;
         }
+
 
         /* ── NAVIGATION ── */
         .nav-controls {
@@ -1236,6 +1252,10 @@
     <div class="cyber-grid"></div>
     <div class="scan-line"></div>
 
+    <!-- ── FLAG LOGO TOP-LEFT ── -->
+    <img src="../images/flag.png" alt="Flag"
+        style="position: fixed; top: 20px; left: 20px; z-index: 100; height: 250px;">
+
     <!-- ── CORNER DECORATIONS ── -->
     <div class="corner-deco tl"></div>
     <div class="corner-deco tr"></div>
@@ -1250,7 +1270,7 @@
             <div class="welcome-content">
                 <div class="welcome-badge fade-up">22 April 2026 &bull; Avans Hogeschool</div>
                 <h1 class="fade-up">
-                    <span class="gradient-text">Future of IT</span>
+                    <!-- <img src="../images/logo_fit_zwart.svg" alt="Future of IT" style="height: 1.5em; vertical-align: middle;"> -->
                 </h1>
                 <p class="subtitle fade-up" style="max-width: 800px; font-size: 1.8rem;">
                     Welkom bij de derde editie van het Future of IT event!<br>
@@ -1717,7 +1737,11 @@
 
     <!-- ── SPONSOR BAR ── -->
     <div class="sponsor-bar">
+        <img src="../images/logo_fit_zwart.svg" alt="Future of IT" class="sponsor-fit-logo">
+        <div class="sponsor-divider"></div>
         <span class="sponsor-label">Partners</span>
+        <div class="sponsor-divider"></div>
+        <img src="../images/sponsors/enexis.png" alt="Enexis" class="sponsor-enexis">
         <div class="sponsor-divider"></div>
         <img src="../images/sponsors/avans.png" alt="Avans Hogeschool">
         <div class="sponsor-divider"></div>
@@ -1725,9 +1749,7 @@
         <div class="sponsor-divider"></div>
         <img src="../images/sponsors/infosupport.svg" alt="Info Support">
         <div class="sponsor-divider"></div>
-        <img src="../images/sponsors/cz.svg" alt="CZ">
-        <div class="sponsor-divider"></div>
-        <img src="../images/sponsors/enexis.png" alt="Enexis">
+        <img src="../images/sponsors/cz.svg" alt="CZ" class="sponsor-cz">
     </div>
 
     <!-- ── SLIDE INDICATORS ── -->
