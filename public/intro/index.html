@@ -199,6 +199,31 @@
             padding: 35px;
         }
 
+        /* ── SLIDE: YOUTUBE EMBED ── */
+        .video-layout {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            width: 100%;
+            max-width: 1400px;
+        }
+
+        .video-wrapper {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 0 60px rgba(0, 255, 255, 0.1);
+        }
+
+        .video-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
         /* ── SLIDE 1: WELCOME ── */
         .welcome-content {
             text-align: center;
@@ -839,7 +864,7 @@
 
         .brainshot-card .bs-org {
             font-size: 1rem;
-            color: rgba(255,255,255,0.45);
+            color: rgba(255, 255, 255, 0.45);
             margin-top: -10px;
         }
 
@@ -854,7 +879,7 @@
             align-items: center;
             gap: 20px;
             font-size: 0.9rem;
-            color: rgba(255,255,255,0.35);
+            color: rgba(255, 255, 255, 0.35);
         }
 
         .brainshot-card .bs-seats {
@@ -871,6 +896,113 @@
             color: var(--primary);
         }
 
+        /* ── AI THREAT SLIDES ── */
+        .ai-threat-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            width: 100%;
+            max-width: 1500px;
+        }
+
+        .ai-threat-layout>h2 {
+            text-align: center;
+            font-size: 3rem;
+        }
+
+        .ai-threat-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .ai-threat-points {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .ai-threat-points li {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.75);
+            padding: 16px 20px;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 14px;
+        }
+
+        .ai-threat-points li .point-icon {
+            flex-shrink: 0;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), var(--secondary));
+            font-size: 1rem;
+            color: #fff;
+        }
+
+        .ai-threat-warning {
+            padding: 30px;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-left: 4px solid var(--accent);
+            border-radius: 16px;
+        }
+
+        .ai-threat-warning h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 14px;
+        }
+
+        .ai-threat-warning p {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .ai-threat-warning strong {
+            color: var(--accent);
+        }
+
+        .ai-threat-warning .warning-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .ai-threat-warning .warning-list li {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .ai-threat-warning .warning-list strong {
+            color: var(--primary);
+        }
+
+        .ai-threat-section-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--primary);
+            margin-bottom: -20px;
+            text-align: center;
+        }
+
         /* ── SPONSOR SIDEBAR ── */
         .sponsor-bar {
             position: fixed;
@@ -884,9 +1016,9 @@
             align-items: center;
             justify-content: center;
             gap: 32px;
-            background: linear-gradient(270deg, rgba(5,5,16,0.97) 60%, transparent);
+            background: linear-gradient(270deg, rgba(5, 5, 16, 0.97) 60%, transparent);
             padding: 40px 0;
-            border-left: 1px solid rgba(255,255,255,0.05);
+            border-left: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .sponsor-bar img,
@@ -907,14 +1039,14 @@
         .sponsor-divider {
             width: 40px;
             height: 1px;
-            background: rgba(255,255,255,0.08);
+            background: rgba(255, 255, 255, 0.08);
         }
 
         .sponsor-label {
             font-size: 0.6rem;
             text-transform: uppercase;
             letter-spacing: 3px;
-            color: rgba(255,255,255,0.2);
+            color: rgba(255, 255, 255, 0.2);
             font-weight: 600;
             writing-mode: vertical-rl;
             text-orientation: mixed;
@@ -1131,7 +1263,40 @@
             </div>
         </div>
 
-        <!-- SLIDE 2: THREAT LANDSCAPE -->
+        <!-- SLIDE 2: YOUTUBE VIDEO -->
+        <div class="slide" id="slide-video">
+            <div class="video-layout">
+                <div class="video-wrapper fade-up">
+                    <iframe src="https://www.youtube.com/embed/40SnEd1RWUU?rel=0" title="Future of IT"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 3: YOUR HOST (STEFAN) -->
+        <div class="slide" id="slide-1">
+            <div class="host-layout">
+                <div class="host-image-container fade-up">
+                    <div class="host-ring"></div>
+                    <img class="host-image" src="../images/resource/stefan-van-dockum.png" alt="Stefan van Dockum">
+                </div>
+                <div class="host-info">
+                    <h2 class="fade-up glow-text">Stefan van Dockum</h2>
+                    <div class="role fade-up">Dagvoorzitter</div>
+                    <p class="subtitle fade-up">
+                        Wat kan je van mij verwachten?<br>
+                        Wat ik van jullie verwacht?
+
+                    </p>
+                    <p class="subtitle fade-up" style="margin-top: 20px; color: var(--primary); font-weight: 600;">
+                        Praat, ontdek, leer en geniet!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE: THREAT LANDSCAPE -->
         <div class="slide" id="slide-threats">
             <div class="hacks-layout">
                 <h2 class="fade-up"><span class="gradient-text">Cyber Threat Landscape</span>&nbsp;&nbsp;<span
@@ -1236,24 +1401,74 @@
             </div>
         </div>
 
-        <!-- SLIDE 3: YOUR HOST (STEFAN) -->
-        <div class="slide" id="slide-1">
-            <div class="host-layout">
-                <div class="host-image-container fade-up">
-                    <div class="host-ring"></div>
-                    <img class="host-image" src="../images/resource/stefan-van-dockum.png" alt="Stefan van Dockum">
+        <!-- SLIDE: GEWAPENDE AGENT -->
+        <div class="slide" id="slide-ai-2">
+            <div class="ai-threat-layout">
+                <div class="ai-threat-section-label fade-up">AI &amp; Cybersecurity</div>
+                <h2 class="fade-up"><span class="gradient-text">De Gewapende Agent</span></h2>
+                <div class="ai-threat-grid">
+                    <div class="fade-up">
+                        <ul class="ai-threat-points">
+                            <li><span class="point-icon">1</span> LLMs met Agency (Doelen + Tools)</li>
+                            <li><span class="point-icon">2</span> Autonome Multi-Step Kill Chains</li>
+                            <li><span class="point-icon">3</span> "Agent-in-the-Middle" Social Engineering</li>
+                            <li><span class="point-icon">4</span> "Prompting is de Nieuwe Exploit Kit"</li>
+                        </ul>
+                    </div>
+                    <div class="ai-threat-warning fade-up">
+                        <h3>De ICT Waarschuwing</h3>
+                        <p>Als een agent systeem-niveau toegang heeft, is <strong><br>Prompt Injection de nieuwe
+                                Remote Code Execution(RCE)</strong>. Beveiliging is nu een AI-alignement probleem.</p>
+                    </div>
                 </div>
-                <div class="host-info">
-                    <h2 class="fade-up glow-text">Stefan van Dockum</h2>
-                    <div class="role fade-up">Dagvoorzitter</div>
-                    <p class="subtitle fade-up">
-                        Wat kan je van mij verwachten?<br>
-                        Wat ik van jullie verwacht?
+            </div>
+        </div>
 
-                    </p>
-                    <p class="subtitle fade-up" style="margin-top: 20px; color: var(--primary); font-weight: 600;">
-                        Praat, ontdek, leer en geniet!
-                    </p>
+        <!-- SLIDE: CaaS & VIBE ATTACKING -->
+        <div class="slide" id="slide-ai-3">
+            <div class="ai-threat-layout">
+                <div class="ai-threat-section-label fade-up">AI &amp; Cybersecurity</div>
+                <h2 class="fade-up"><span class="gradient-text">CaaS 2.0 &amp; "Vibe Attacking"</span></h2>
+                <div class="ai-threat-grid">
+                    <div class="fade-up">
+                        <ul class="ai-threat-points">
+                            <li><span class="point-icon">1</span> Crime-as-a-Service (CaaS) Offensive Modellen</li>
+                            <li><span class="point-icon">2</span> "Vibe Attacking": Geautomatiseerde
+                                Sentimentmanipulatie</li>
+                            <li><span class="point-icon">3</span> Perfecte Deepfakes voor CEO Fraude / BEC</li>
+                        </ul>
+                    </div>
+                    <div class="ai-threat-warning fade-up">
+                        <h3>De Misdaadgroepen</h3>
+                        <ul class="warning-list">
+                            <li><strong>LockBit / ALPHV:</strong> Ransomware-syndicaten die AI gebruiken voor snelle
+                                exploitatie.</li>
+                            <li><strong>Lapsus$ Style Actors:</strong> Social engineers die AI-deepfakes gebruiken.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE: ADAPTIEVE DEFENSIE -->
+        <div class="slide" id="slide-ai-4">
+            <div class="ai-threat-layout">
+                <div class="ai-threat-section-label fade-up">AI &amp; Cybersecurity</div>
+                <h2 class="fade-up"><span class="gradient-text">Adaptive Defense: Het Cyan Team</span></h2>
+                <div class="ai-threat-grid">
+                    <div class="fade-up">
+                        <ul class="ai-threat-points">
+                            <li><span class="point-icon">1</span> AI vs. AI Defensie &amp; Geautomatiseerd Red-Teaming
+                            </li>
+                            <li><span class="point-icon">2</span> Observability: Audit de AI-Besluitvormingslus</li>
+                            <li><span class="point-icon">3</span> Autonome Security Orchestration, Automation and
+                                Response (SOAR) in Milliseconds</li>
+                        </ul>
+                    </div>
+                    <div class="ai-threat-warning fade-up">
+                        <h3>De Laatste Waarschuwing</h3>
+                        <p>Je kunt niet alleen op dashboards vertrouwen.</p>
+                    </div>
                 </div>
             </div>
         </div>
