@@ -1,0 +1,1651 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, height=1080, initial-scale=1.0">
+    <title>Future of IT 2026 — Opening</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            overflow: hidden;
+            background: #050510;
+        }
+
+        :root {
+            --primary: #0ff;
+            --secondary: #f0f;
+            --accent: #ff3366;
+            --dark: #0a0a1a;
+            --darker: #050510;
+            --glass: rgba(255, 255, 255, 0.06);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            background: var(--darker);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+            width: 1920px;
+            height: 1080px;
+            position: relative;
+            transform-origin: 0 0;
+        }
+
+        /* ── BACKGROUND BANNER IMAGE ── */
+        .bg-banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('../images/banner/bannerhome.png') center center / cover no-repeat;
+            opacity: 0.15;
+            z-index: 0;
+            filter: blur(2px);
+        }
+
+        /* ── ANIMATED PARTICLE CANVAS ── */
+        #particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* ── CYBER GRID OVERLAY ── */
+        .cyber-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-image:
+                linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            animation: gridMove 20s linear infinite;
+        }
+
+        @keyframes gridMove {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 60px 60px;
+            }
+        }
+
+        /* ── SCANNING LINE ── */
+        .scan-line {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+            z-index: 2;
+            animation: scanDown 4s ease-in-out infinite;
+            opacity: 0.4;
+        }
+
+        @keyframes scanDown {
+            0% {
+                top: -3px;
+            }
+
+            100% {
+                top: 100%;
+            }
+        }
+
+        /* ── SLIDE CONTAINER ── */
+        .slide-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 1920px;
+            height: 1080px;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transform: scale(0.95);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+            pointer-events: none;
+            padding: 60px 160px 60px 100px;
+        }
+
+        .slide.active {
+            opacity: 1;
+            transform: scale(1);
+            pointer-events: auto;
+        }
+
+        /* ── TYPOGRAPHY ── */
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 900;
+            font-size: 5rem;
+            line-height: 1.05;
+            letter-spacing: -2px;
+        }
+
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 3rem;
+            line-height: 1.1;
+        }
+
+        h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 2rem;
+        }
+
+        .subtitle {
+            font-size: 1.6rem;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .glow-text {
+            text-shadow: 0 0 30px rgba(0, 255, 255, 0.4), 0 0 60px rgba(0, 255, 255, 0.2);
+        }
+
+        /* ── GLASS CARDS ── */
+        .glass-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            padding: 35px;
+        }
+
+        /* ── SLIDE 1: WELCOME ── */
+        .welcome-content {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .welcome-content h1 {
+            font-size: 6rem;
+        }
+
+        .welcome-badge {
+            display: inline-block;
+            padding: 10px 30px;
+            border: 1px solid var(--primary);
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--primary);
+            animation: pulseBorder 2s ease-in-out infinite;
+        }
+
+        @keyframes pulseBorder {
+
+            0%,
+            100% {
+                box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+            }
+
+            50% {
+                box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+            }
+        }
+
+        .welcome-date {
+            font-size: 1.8rem;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* ── SLIDE: THREAT LANDSCAPE ── */
+        .hacks-layout {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 28px;
+            width: 100%;
+            max-width: 1560px;
+        }
+
+        .hacks-layout>h2 {
+            text-align: center;
+        }
+
+        .hacks-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 100%;
+        }
+
+        .hack-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 22px 26px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hack-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+        }
+
+        .hack-card.critical::before {
+            background: linear-gradient(90deg, #ff3366, #ff6600);
+        }
+
+        .hack-card.high::before {
+            background: linear-gradient(90deg, #ff9900, #ffcc00);
+        }
+
+        .hack-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .hack-org {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.55rem;
+        }
+
+        .hack-severity {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            flex-shrink: 0;
+        }
+
+        .hack-severity.critical {
+            background: rgba(255, 51, 102, 0.15);
+            border: 1px solid rgba(255, 51, 102, 0.4);
+            color: #ff3366;
+        }
+
+        .hack-severity.high {
+            background: rgba(255, 153, 0, 0.15);
+            border: 1px solid rgba(255, 153, 0, 0.4);
+            color: #ff9900;
+        }
+
+        .hack-severity .pulse {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: currentColor;
+            animation: severityPulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes severityPulse {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.4;
+                transform: scale(0.7);
+            }
+        }
+
+        .hack-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .hack-tag {
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 2px 10px;
+            border-radius: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        .hack-tag.type {
+            background: rgba(0, 255, 255, 0.1);
+            border: 1px solid rgba(0, 255, 255, 0.25);
+            color: var(--primary);
+        }
+
+        .hack-tag.actor {
+            background: rgba(255, 0, 255, 0.1);
+            border: 1px solid rgba(255, 0, 255, 0.25);
+            color: var(--secondary);
+        }
+
+        .hack-desc {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.5;
+        }
+
+        .hack-impact {
+            margin-top: auto;
+            font-family: 'Space Grotesk', monospace;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #fff;
+        }
+
+        .hack-impact span {
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.4);
+            margin-left: 4px;
+        }
+
+        .hack-meta {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .hack-meta .flag {
+            font-size: 1rem;
+        }
+
+        /* ── SLIDE 2: YOUR HOST (STEFAN) ── */
+        .host-layout {
+            display: flex;
+            align-items: center;
+            gap: 80px;
+            width: 100%;
+            max-width: 1400px;
+        }
+
+        .host-image-container {
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .host-image {
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center 15%;
+            transform: scale(1.5);
+            transform-origin: center 15%;
+            border: 3px solid var(--primary);
+            box-shadow: 0 0 40px rgba(0, 255, 255, 0.3), 0 0 80px rgba(0, 255, 255, 0.1);
+        }
+
+        .host-ring {
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            width: 290px;
+            height: 290px;
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 50%;
+            animation: spinSlow 15s linear infinite;
+            border-top-color: var(--primary);
+        }
+
+        @keyframes spinSlow {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .host-info {
+            flex: 1;
+        }
+
+        .host-info h2 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+        }
+
+        .host-info .role {
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .host-info .subtitle {
+            font-size: 1.4rem;
+        }
+
+        /* ── SLIDE 3: DAGPROGRAMMA ── */
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            width: 100%;
+            max-width: 1500px;
+        }
+
+        .schedule-grid h2 {
+            grid-column: 1 / -1;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .schedule-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px 25px;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .schedule-item:hover {
+            border-color: var(--primary);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+        }
+
+        .schedule-time {
+            font-family: 'Space Grotesk', monospace;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--primary);
+            min-width: 130px;
+            text-align: center;
+            padding: 8px 12px;
+            border-right: 2px solid rgba(0, 255, 255, 0.2);
+        }
+
+        .schedule-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 4px;
+        }
+
+        .schedule-info p {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .schedule-highlight {
+            border-color: var(--accent) !important;
+            background: rgba(255, 51, 102, 0.08);
+        }
+
+        .schedule-highlight .schedule-time {
+            color: var(--accent);
+            border-color: rgba(255, 51, 102, 0.3);
+        }
+
+        /* ── SLIDE 4: SPEAKERS ── */
+        .speakers-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            width: 100%;
+        }
+
+        .speakers-row {
+            display: flex;
+            gap: 35px;
+            justify-content: center;
+        }
+
+        .speaker-card {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .speaker-thumb {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--glass-border);
+            transition: all 0.3s ease;
+        }
+
+        .speaker-card.keynote .speaker-thumb {
+            width: 160px;
+            height: 160px;
+            border-color: var(--accent);
+            box-shadow: 0 0 25px rgba(255, 51, 102, 0.3);
+        }
+
+        .speaker-name {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .speaker-org {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .keynote-badge {
+            display: inline-block;
+            padding: 3px 12px;
+            background: rgba(255, 51, 102, 0.2);
+            border: 1px solid var(--accent);
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent);
+        }
+
+        /* ── SLIDE 5: WORKSHOPS ── */
+        .workshops-layout {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            width: 100%;
+            max-width: 1400px;
+        }
+
+        .workshop-rounds {
+            display: flex;
+            gap: 40px;
+            width: 100%;
+        }
+
+        .workshop-round {
+            flex: 1;
+            text-align: center;
+        }
+
+        .workshop-round h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.6rem;
+        }
+
+        .workshop-round .time-badge {
+            display: inline-block;
+            padding: 6px 20px;
+            background: rgba(0, 255, 255, 0.1);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: 30px;
+            font-family: 'Space Grotesk', monospace;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .workshop-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .workshop-list li {
+            padding: 15px 20px;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            font-size: 1rem;
+            text-align: left;
+        }
+
+        .workshop-list li .ws-speaker {
+            display: block;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.4);
+            margin-top: 4px;
+        }
+
+        .location-note {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px 30px;
+            background: rgba(0, 255, 255, 0.06);
+            border: 1px solid rgba(0, 255, 255, 0.15);
+            border-radius: 16px;
+            font-size: 1.15rem;
+        }
+
+        .location-note .icon {
+            font-size: 2rem;
+        }
+
+        /* ── SLIDE 6: CYBERHUNT ── */
+        .cyberhunt-layout {
+            display: flex;
+            align-items: center;
+            gap: 70px;
+            max-width: 1400px;
+        }
+
+        .cyberhunt-info {
+            flex: 1;
+        }
+
+        .cyberhunt-info h2 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .cyberhunt-info .subtitle {
+            margin-bottom: 30px;
+        }
+
+        .cyberhunt-rules {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .cyberhunt-rules li {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        .cyberhunt-rules li .num {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            font-weight: 900;
+            font-size: 1.1rem;
+            color: var(--darker);
+            flex-shrink: 0;
+        }
+
+        .prize-box {
+            flex-shrink: 0;
+            width: 380px;
+            text-align: center;
+            padding: 50px 40px;
+        }
+
+        .prize-box .flipper-icon {
+            font-size: 6rem;
+            margin-bottom: 20px;
+            display: block;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .prize-box h3 {
+            font-size: 2.2rem;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+
+        .prize-box p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1.1rem;
+        }
+
+        /* ── SLIDE 7: BRAINSHOTS OVERVIEW ── */
+        .brainshots-layout {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+            width: 100%;
+            max-width: 1500px;
+        }
+
+        .brainshots-header {
+            text-align: center;
+        }
+
+        .brainshots-header h2 {
+            font-size: 3.5rem;
+            margin-bottom: 8px;
+        }
+
+        .brainshots-header .tagline {
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .brainshots-cards {
+            display: flex;
+            gap: 40px;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .brainshot-card {
+            flex: 1;
+            max-width: 400px;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 40px 30px 35px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .brainshot-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.12);
+        }
+
+        .brainshot-card .bs-photo {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--glass-border);
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.15);
+        }
+
+        .brainshot-card .bs-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .brainshot-card .bs-org {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.45);
+            margin-top: -10px;
+        }
+
+        .brainshot-card .bs-topic {
+            font-size: 1.15rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .brainshot-card .bs-meta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.35);
+        }
+
+        .brainshot-card .bs-seats {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 14px;
+            background: rgba(0, 255, 255, 0.08);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 20px;
+            font-family: 'Space Grotesk', monospace;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--primary);
+        }
+
+        /* ── SPONSOR SIDEBAR ── */
+        .sponsor-bar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 260px;
+            height: 100%;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            background: linear-gradient(270deg, rgba(5,5,16,0.97) 60%, transparent);
+            padding: 40px 0;
+            border-left: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .sponsor-bar img,
+        .sponsor-bar object {
+            width: 200px;
+            opacity: 0.55;
+            filter: brightness(1.4) grayscale(0.2);
+            transition: all 0.3s ease;
+            object-fit: contain;
+        }
+
+        .sponsor-bar img:hover,
+        .sponsor-bar object:hover {
+            opacity: 1;
+            filter: brightness(1.6) grayscale(0);
+        }
+
+        .sponsor-divider {
+            width: 40px;
+            height: 1px;
+            background: rgba(255,255,255,0.08);
+        }
+
+        .sponsor-label {
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: rgba(255,255,255,0.2);
+            font-weight: 600;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+            margin-top: 10px;
+        }
+
+        /* ── NAVIGATION ── */
+        .nav-controls {
+            position: fixed;
+            bottom: 40px;
+            right: 285px;
+            z-index: 100;
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid var(--glass-border);
+            background: var(--glass);
+            color: #fff;
+            font-size: 1.3rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            border-color: var(--primary);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+        }
+
+        /* ── SLIDE INDICATOR ── */
+        .slide-indicators {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            display: flex;
+            gap: 8px;
+        }
+
+        .indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.15);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .indicator.active {
+            background: var(--primary);
+            box-shadow: 0 0 10px var(--primary);
+            width: 30px;
+            border-radius: 4px;
+        }
+
+        /* ── CORNER DECORATIONS ── */
+        .corner-deco {
+            position: fixed;
+            z-index: 5;
+            width: 80px;
+            height: 80px;
+        }
+
+        .corner-deco.tl {
+            top: 20px;
+            left: 20px;
+            border-top: 2px solid rgba(0, 255, 255, 0.15);
+            border-left: 2px solid rgba(0, 255, 255, 0.15);
+        }
+
+        .corner-deco.tr {
+            top: 20px;
+            right: 280px;
+            border-top: 2px solid rgba(0, 255, 255, 0.15);
+            border-right: 2px solid rgba(0, 255, 255, 0.15);
+        }
+
+        .corner-deco.bl {
+            bottom: 20px;
+            left: 20px;
+            border-bottom: 2px solid rgba(0, 255, 255, 0.15);
+            border-left: 2px solid rgba(0, 255, 255, 0.15);
+        }
+
+        .corner-deco.br {
+            bottom: 20px;
+            right: 280px;
+            border-bottom: 2px solid rgba(0, 255, 255, 0.15);
+            border-right: 2px solid rgba(0, 255, 255, 0.15);
+        }
+
+        /* ── HACK CARD STAGGER ── */
+        .hack-card.fade-up {
+            transition-delay: calc(var(--stagger, 0) * 0.12s);
+        }
+
+        /* ── ANIMATIONS ── */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .slide.active .fade-up {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .slide.active .fade-up:nth-child(2) {
+            transition-delay: 0.15s;
+        }
+
+        .slide.active .fade-up:nth-child(3) {
+            transition-delay: 0.3s;
+        }
+
+        .slide.active .fade-up:nth-child(4) {
+            transition-delay: 0.45s;
+        }
+
+        .slide.active .fade-up:nth-child(5) {
+            transition-delay: 0.6s;
+        }
+
+        .slide.active .fade-up:nth-child(6) {
+            transition-delay: 0.75s;
+        }
+
+        .slide.active .fade-up:nth-child(7) {
+            transition-delay: 0.9s;
+        }
+
+        .slide.active .fade-up:nth-child(8) {
+            transition-delay: 1.05s;
+        }
+
+        /* ── GLITCH EFFECT ── */
+        @keyframes glitch {
+            0% {
+                clip-path: inset(40% 0 61% 0);
+                transform: translate(-2px, 2px);
+            }
+
+            20% {
+                clip-path: inset(92% 0 1% 0);
+                transform: translate(1px, -1px);
+            }
+
+            40% {
+                clip-path: inset(43% 0 1% 0);
+                transform: translate(-1px, 3px);
+            }
+
+            60% {
+                clip-path: inset(25% 0 58% 0);
+                transform: translate(3px, 1px);
+            }
+
+            80% {
+                clip-path: inset(54% 0 7% 0);
+                transform: translate(-3px, -2px);
+            }
+
+            100% {
+                clip-path: inset(58% 0 43% 0);
+                transform: translate(2px, -3px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ── BACKGROUND LAYERS ── -->
+    <div class="bg-banner"></div>
+    <canvas id="particles"></canvas>
+    <div class="cyber-grid"></div>
+    <div class="scan-line"></div>
+
+    <!-- ── CORNER DECORATIONS ── -->
+    <div class="corner-deco tl"></div>
+    <div class="corner-deco tr"></div>
+    <div class="corner-deco bl"></div>
+    <div class="corner-deco br"></div>
+
+    <!-- ── SLIDES ── -->
+    <div class="slide-container">
+
+        <!-- SLIDE 1: WELCOME -->
+        <div class="slide active" id="slide-0">
+            <div class="welcome-content">
+                <div class="welcome-badge fade-up">22 April 2026 &bull; Avans Hogeschool</div>
+                <h1 class="fade-up">
+                    <span class="gradient-text">Future of IT</span>
+                </h1>
+                <p class="subtitle fade-up" style="max-width: 800px; font-size: 1.8rem;">
+                    Welkom bij de derde editie van het Future of IT event!<br>
+                    Securing the Future -- Cybersecurity
+                </p>
+                <div class="welcome-date fade-up"
+                    style="margin-top: 20px; font-size: 1.3rem; color: rgba(255,255,255,0.4);">
+                    Fijn dat je er bent!
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 2: THREAT LANDSCAPE -->
+        <div class="slide" id="slide-threats">
+            <div class="hacks-layout">
+                <h2 class="fade-up"><span class="gradient-text">Cyber Threat Landscape</span>&nbsp;&nbsp;<span
+                        style="color:rgba(255,255,255,0.25);font-size:1.4rem;font-weight:300">2025 – 2026</span></h2>
+
+                <div class="hacks-grid">
+
+                    <div class="hack-card critical fade-up" style="--stagger:0">
+                        <div class="hack-card-header">
+                            <span class="hack-org">Bybit Exchange</span>
+                            <span class="hack-severity critical"><span class="pulse"></span>Critical</span>
+                        </div>
+                        <div class="hack-tags">
+                            <span class="hack-tag type">Crypto Theft</span>
+                            <span class="hack-tag actor">Lazarus Group</span>
+                        </div>
+                        <p class="hack-desc">Grootste crypto-diefstal ooit. Noord-Koreaanse hackers stalen Ethereum via
+                            kwaadaardige JavaScript in het transactie-signeringsproces.</p>
+                        <div class="hack-impact">$1.5B <span>gestolen in crypto</span></div>
+                        <div class="hack-meta"><span class="flag">🇰🇵</span> Noord-Korea &bull; Februari 2025</div>
+                    </div>
+
+                    <div class="hack-card critical fade-up" style="--stagger:1">
+                        <div class="hack-card-header">
+                            <span class="hack-org">Marks &amp; Spencer</span>
+                            <span class="hack-severity critical"><span class="pulse"></span>Critical</span>
+                        </div>
+                        <div class="hack-tags">
+                            <span class="hack-tag type">Ransomware</span>
+                            <span class="hack-tag actor">Scattered Spider</span>
+                        </div>
+                        <p class="hack-desc">Social engineering via de servicedesk gaf toegang tot interne systemen.
+                            Online bestellingen, contactloos betalen en click-and-collect wekenlang offline.</p>
+                        <div class="hack-impact">£300M <span>geschatte schade</span></div>
+                        <div class="hack-meta"><span class="flag">🇬🇧</span> Verenigd Koninkrijk &bull; April 2025
+                        </div>
+                    </div>
+
+                    <div class="hack-card critical fade-up" style="--stagger:2">
+                        <div class="hack-card-header">
+                            <span class="hack-org">16 Miljard Credentials</span>
+                            <span class="hack-severity critical"><span class="pulse"></span>Critical</span>
+                        </div>
+                        <div class="hack-tags">
+                            <span class="hack-tag type">Credential Dump</span>
+                            <span class="hack-tag actor">Meerdere actoren</span>
+                        </div>
+                        <p class="hack-desc">Onderzoekers ontdekten 30 gelekte datasets met 16 miljard inloggegevens —
+                            waaronder accounts voor Google, Apple, Facebook, GitHub en overheidsdiensten.</p>
+                        <div class="hack-impact">16B <span>wachtwoorden uitgelekt</span></div>
+                        <div class="hack-meta"><span class="flag">🌍</span> Wereldwijd &bull; Midden 2025</div>
+                    </div>
+
+                    <div class="hack-card critical fade-up" style="--stagger:3">
+                        <div class="hack-card-header">
+                            <span class="hack-org">Jaguar Land Rover</span>
+                            <span class="hack-severity critical"><span class="pulse"></span>Critical</span>
+                        </div>
+                        <div class="hack-tags">
+                            <span class="hack-tag type">Ransomware</span>
+                            <span class="hack-tag actor">Scattered Spider</span>
+                        </div>
+                        <p class="hack-desc">Productie vijf weken stilgelegd. Meer dan 5.000 toeleveranciers getroffen.
+                            Zwaarste cyberaanval ooit in de Britse geschiedenis.</p>
+                        <div class="hack-impact">£1.9B <span>economische schade</span></div>
+                        <div class="hack-meta"><span class="flag">🇬🇧</span> Verenigd Koninkrijk &bull; Augustus 2025
+                        </div>
+                    </div>
+
+                    <div class="hack-card high fade-up" style="--stagger:4">
+                        <div class="hack-card-header">
+                            <span class="hack-org">Oracle E-Business Suite</span>
+                            <span class="hack-severity high"><span class="pulse"></span>High</span>
+                        </div>
+                        <div class="hack-tags">
+                            <span class="hack-tag type">Supply Chain</span>
+                            <span class="hack-tag actor">Clop</span>
+                        </div>
+                        <p class="hack-desc">Zero-day in Oracle's bedrijfssoftware misbruikt door de Clop-bende.
+                            Tientallen organisaties getroffen, waaronder NHS-ziekenhuizen in Londen.</p>
+                        <div class="hack-impact">Tientallen <span>organisaties getroffen</span></div>
+                        <div class="hack-meta"><span class="flag">🇬🇧</span> Wereldwijd &bull; Oktober 2025</div>
+                    </div>
+
+                    <div class="hack-card high fade-up" style="--stagger:5">
+                        <div class="hack-card-header">
+                            <span class="hack-org">Eurail &amp; BridgePay</span>
+                            <span class="hack-severity high"><span class="pulse"></span>High</span>
+                        </div>
+                        <div class="hack-tags">
+                            <span class="hack-tag type">Data Breach</span>
+                            <span class="hack-tag actor">Qilin / LockBit</span>
+                        </div>
+                        <p class="hack-desc">Reisdata van Eurail-klanten te koop aangeboden. BridgePay's
+                            betaalinfrastructuur platgelegd door ransomware — honderden gemeenten en bedrijven offline.
+                        </p>
+                        <div class="hack-impact">750–800 <span>US-slachtoffers in jan–feb 2026</span></div>
+                        <div class="hack-meta"><span class="flag">🌍</span> Europa &amp; VS &bull; Januari 2026</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 3: YOUR HOST (STEFAN) -->
+        <div class="slide" id="slide-1">
+            <div class="host-layout">
+                <div class="host-image-container fade-up">
+                    <div class="host-ring"></div>
+                    <img class="host-image" src="../images/resource/stefan-van-dockum.png" alt="Stefan van Dockum">
+                </div>
+                <div class="host-info">
+                    <h2 class="fade-up glow-text">Stefan van Dockum</h2>
+                    <div class="role fade-up">Dagvoorzitter</div>
+                    <p class="subtitle fade-up">
+                        Wat kan je van mij verwachten?<br>
+                        Wat ik van jullie verwacht?
+
+                    </p>
+                    <p class="subtitle fade-up" style="margin-top: 20px; color: var(--primary); font-weight: 600;">
+                        Praat, ontdek, leer en geniet!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 3: DAGPROGRAMMA -->
+        <div class="slide" id="slide-2">
+            <div class="schedule-grid">
+                <h2 class="fade-up"><span class="gradient-text">Dagprogramma</span></h2>
+                <div class="schedule-item fade-up">
+                    <div class="schedule-time">9:30 — 10:00</div>
+                    <div class="schedule-info">
+                        <h3>Inloop met koffie &amp; thee</h3>
+                        <p>Lekker bakkie en bijpraten</p>
+                    </div>
+                </div>
+                <div class="schedule-item schedule-highlight fade-up">
+                    <div class="schedule-time">10:00 — 10:30</div>
+                    <div class="schedule-info">
+                        <h3>Opening &amp; Inspiratie</h3>
+                        <p>Stefan van Dockum — Dagvoorzitter</p>
+                    </div>
+                </div>
+                <div class="schedule-item fade-up">
+                    <div class="schedule-time">10:30 — 11:30</div>
+                    <div class="schedule-info">
+                        <h3>Brainshots</h3>
+                        <p>3 korte sessies van onze partners</p>
+                    </div>
+                </div>
+                <div class="schedule-item schedule-highlight fade-up">
+                    <div class="schedule-time">11:30 — 12:15</div>
+                    <div class="schedule-info">
+                        <h3>Keynote — Ethical Hacking</h3>
+                        <p>Edwin van Andel</p>
+                    </div>
+                </div>
+                <div class="schedule-item fade-up">
+                    <div class="schedule-time">12:15 — 13:00</div>
+                    <div class="schedule-info">
+                        <h3>Lunch</h3>
+                        <p>Netwerken met sprekers &amp; deelnemers</p>
+                    </div>
+                </div>
+                <div class="schedule-item fade-up">
+                    <div class="schedule-time">13:00 — 14:30</div>
+                    <div class="schedule-info">
+                        <h3>Workshops Ronde 1 &amp; 2</h3>
+                        <p>Hands-on sessies bij onze partners</p>
+                    </div>
+                </div>
+                <div class="schedule-item fade-up">
+                    <div class="schedule-time">14:30 — 15:00</div>
+                    <div class="schedule-info">
+                        <h3>CyberHunt &amp; Prijsuitreiking</h3>
+                        <p>Win een Flipper Zero!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 4: SPEAKERS -->
+        <div class="slide" id="slide-3">
+            <div class="speakers-grid">
+                <h2 class="fade-up"><span class="gradient-text">Speakers &amp; Experts</span></h2>
+
+                <!-- Keynote -->
+                <div class="speakers-row fade-up">
+                    <div class="speaker-card keynote">
+                        <img class="speaker-thumb" src="../images/resource/edwin-van-andel.png" alt="Edwin van Andel">
+                        <span class="keynote-badge">Keynote</span>
+                        <span class="speaker-name">Edwin van Andel</span>
+                        <span class="speaker-org">Ethical Hacker</span>
+                    </div>
+                </div>
+
+                <!-- Brainshot Speakers -->
+                <div class="speakers-row fade-up">
+                    <div class="speaker-card">
+                        <img class="speaker-thumb" src="../images/resource/tom-de-haan.png" alt="Tom de Haan">
+                        <span class="speaker-name">Tom de Haan</span>
+                        <span class="speaker-org">Enexis</span>
+                    </div>
+                    <div class="speaker-card">
+                        <img class="speaker-thumb" src="../images/resource/rob-smit.png" alt="Rob Smit">
+                        <span class="speaker-name">Rob Smit</span>
+                        <span class="speaker-org">Axians</span>
+                    </div>
+                    <div class="speaker-card">
+                        <img class="speaker-thumb" src="../images/resource/robin_keet.jpg" alt="Robin Keet">
+                        <span class="speaker-name">Robin Keet</span>
+                        <span class="speaker-org">Info Support</span>
+                    </div>
+                </div>
+
+                <!-- Workshop Speakers -->
+                <div class="speakers-row fade-up">
+                    <div class="speaker-card">
+                        <img class="speaker-thumb" src="../images/resource/willem.jpg" alt="Willem Kuijpers">
+                        <span class="speaker-name">Willem Kuijpers</span>
+                        <span class="speaker-org">Enexis</span>
+                    </div>
+                    <div class="speaker-card">
+                        <img class="speaker-thumb" src="../images/resource/tom-gelmers.png" alt="Tom Gelmers">
+                        <span class="speaker-name">Tom Gelmers</span>
+                        <span class="speaker-org">iO Digital</span>
+                    </div>
+                    <div class="speaker-card">
+                        <img class="speaker-thumb" src="../images/resource/roel-van-de-pol.png" alt="Roel van de Pol">
+                        <span class="speaker-name">Roel van de Pol</span>
+                        <span class="speaker-org">Axians</span>
+                    </div>
+                    <div class="speaker-card">
+                        <img class="speaker-thumb" src="../images/resource/wout.jpg" alt="Wout Pittens">
+                        <span class="speaker-name">Wout Pittens</span>
+                        <span class="speaker-org">CBYTE Digital</span>
+                    </div>
+                </div>
+
+                <div class="speakers-row fade-up">
+                    <div class="speaker-card">
+                        <img class="speaker-thumb" src="../images/resource/onno-sidler.png" alt="Onno Sidler">
+                        <span class="speaker-name">Onno Sidler</span>
+                        <span class="speaker-org">Politie</span>
+                    </div>
+                    <div class="speaker-card">
+                        <img class="speaker-thumb" src="../images/resource/aernout.jpg" alt="Aernout Reijmer">
+                        <span class="speaker-name">Aernout Reijmer</span>
+                        <span class="speaker-org">Cyberalloy</span>
+                    </div>
+                    <div class="speaker-card">
+                        <img class="speaker-thumb" src="../images/resource/rhesa-baar.png" alt="Rhesa Baar">
+                        <span class="speaker-name">Rhesa Baar</span>
+                        <span class="speaker-org">Microsoft</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 5: WORKSHOPS & LOCATIONS -->
+        <div class="slide" id="slide-4">
+            <div class="workshops-layout">
+                <h2 class="fade-up"><span class="gradient-text">Workshops &amp; Locaties</span></h2>
+
+                <div class="workshop-rounds fade-up">
+                    <div class="workshop-round glass-card">
+                        <h3>Ronde 1</h3>
+                        <div class="time-badge">13:00 — 14:00</div>
+                        <ul class="workshop-list">
+                            <li>Cybersecurity in de praktijk <span class="ws-speaker">Enexis — Willem Kuijpers</span>
+                            </li>
+                            <li>Red Team vs Blue Team <span class="ws-speaker">Axians — Roel van de Pol</span></li>
+                            <li>AI &amp; Security <span class="ws-speaker">Microsoft — Rhesa Baar</span></li>
+                        </ul>
+                    </div>
+                    <div class="workshop-round glass-card">
+                        <h3>Ronde 2</h3>
+                        <div class="time-badge">14:00 — 14:30</div>
+                        <ul class="workshop-list">
+                            <li>Digital Forensics <span class="ws-speaker">Politie — Onno Sidler</span></li>
+                            <li>Hacking Demo <span class="ws-speaker">Cyberalloy — Aernout Reijmer</span></li>
+                            <li>Secure Development <span class="ws-speaker">CBYTE Digital — Wout Pittens</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="location-note fade-up">
+                    <span class="icon">📍</span>
+                    <div>
+                        <strong>Locatie:</strong> Alle workshops vinden plaats in de aangewezen lokalen.
+                        Check je badge of de borden bij de ingang voor jouw workshoplokaal.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 6: CYBERHUNT -->
+        <div class="slide" id="slide-5">
+            <div class="cyberhunt-layout">
+                <div class="cyberhunt-info">
+                    <h2 class="fade-up"><span class="gradient-text glow-text">CyberHunt</span></h2>
+                    <p class="subtitle fade-up">
+                        Aan het einde van de dag wordt het spannend!
+                        Test je kennis met de CyberHunt challenge.
+                    </p>
+                    <ul class="cyberhunt-rules fade-up">
+                        <li><span class="num">1</span> Let goed op tijdens alle sessies vandaag</li>
+                        <li><span class="num">2</span> Aan het einde krijg je 5 vragen</li>
+                        <li><span class="num">3</span> Beantwoord ze zo snel mogelijk</li>
+                        <li><span class="num">4</span> De snelste met alles goed wint!</li>
+                        <li><span class="num">5</span> De prijs? Een Flipper Zero!</li>
+                    </ul>
+                </div>
+                <div class="prize-box glass-card fade-up">
+                    <span class="flipper-icon">🐬</span>
+                    <h3>Flipper Zero</h3>
+                    <p>Het ultieme hacker-gadget.<br>Let op, want de vragen komen uit de sessies van vandaag!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 7: BRAINSHOTS -->
+        <div class="slide" id="slide-6">
+            <div class="brainshots-layout">
+                <div class="brainshots-header fade-up">
+                    <h2><span class="gradient-text">Brainshots</span></h2>
+                    <div class="tagline">Cybersecurity is topsport!</div>
+                </div>
+
+                <div class="brainshots-cards">
+
+                    <div class="brainshot-card fade-up" style="transition-delay: 0.1s;">
+                        <img class="bs-photo" src="../images/resource/tom-de-haan.png" alt="Tom de Haan">
+                        <span class="bs-name">Tom de Haan</span>
+                        <span class="bs-org">Enexis</span>
+                        <span class="bs-topic">Cybersecurity is topsport!</span>
+                        <div class="bs-meta">
+                            <span>10:30 — 11:00</span>
+                        </div>
+                    </div>
+
+                    <div class="brainshot-card fade-up" style="transition-delay: 0.25s;">
+                        <img class="bs-photo" src="../images/resource/rob-smit.png" alt="Rob Smit">
+                        <span class="bs-name">Rob Smit</span>
+                        <span class="bs-org">Axians</span>
+                        <span class="bs-topic">Internationale Cyberstrijdtoneel</span>
+                        <div class="bs-meta">
+                            <span>10:30 — 11:00</span>
+                        </div>
+                    </div>
+
+                    <div class="brainshot-card fade-up" style="transition-delay: 0.4s;">
+                        <img class="bs-photo" src="../images/resource/robin_keet.jpg" alt="Robin Keet">
+                        <span class="bs-name">Robin Keet</span>
+                        <span class="bs-org">Info Support</span>
+                        <span class="bs-topic">Secure Programming</span>
+                        <div class="bs-meta">
+                            <span>10:30 — 11:00</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ── SPONSOR BAR ── -->
+    <div class="sponsor-bar">
+        <span class="sponsor-label">Partners</span>
+        <div class="sponsor-divider"></div>
+        <img src="../images/sponsors/avans.png" alt="Avans Hogeschool">
+        <div class="sponsor-divider"></div>
+        <img src="../images/sponsors/axians.png" alt="Axians">
+        <div class="sponsor-divider"></div>
+        <img src="../images/sponsors/infosupport.svg" alt="Info Support">
+        <div class="sponsor-divider"></div>
+        <img src="../images/sponsors/cz.svg" alt="CZ">
+        <div class="sponsor-divider"></div>
+        <img src="../images/sponsors/enexis.png" alt="Enexis">
+    </div>
+
+    <!-- ── SLIDE INDICATORS ── -->
+    <div class="slide-indicators" id="indicators"></div>
+
+    <!-- ── NAVIGATION ── -->
+    <div class="nav-controls">
+        <button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)">&#8592;</button>
+        <button class="nav-btn" id="nextBtn" onclick="changeSlide(1)">&#8594;</button>
+    </div>
+
+    <script>
+        // ── PARTICLE SYSTEM ──
+        const canvas = document.getElementById('particles');
+        const ctx = canvas.getContext('2d');
+        canvas.width = 1920;
+        canvas.height = 1080;
+
+        const particles = [];
+        const PARTICLE_COUNT = 80;
+
+        class Particle {
+            constructor() {
+                this.reset();
+            }
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 0.5;
+                this.speedX = (Math.random() - 0.5) * 0.5;
+                this.speedY = (Math.random() - 0.5) * 0.5;
+                this.opacity = Math.random() * 0.5 + 0.1;
+                this.color = Math.random() > 0.5 ? '0, 255, 255' : '255, 0, 255';
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(${this.color}, ${this.opacity})`;
+                ctx.fill();
+            }
+        }
+
+        for (let i = 0; i < PARTICLE_COUNT; i++) {
+            particles.push(new Particle());
+        }
+
+        function drawConnections() {
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < 150) {
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.strokeStyle = `rgba(0, 255, 255, ${0.08 * (1 - dist / 150)})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => { p.update(); p.draw(); });
+            drawConnections();
+            requestAnimationFrame(animateParticles);
+        }
+        animateParticles();
+
+        // ── SLIDE NAVIGATION ──
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        const indicatorsContainer = document.getElementById('indicators');
+
+        // Build indicators
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('div');
+            dot.className = 'indicator' + (i === 0 ? ' active' : '');
+            dot.onclick = () => goToSlide(i);
+            indicatorsContainer.appendChild(dot);
+        }
+
+        function goToSlide(index) {
+            slides[currentSlide].classList.remove('active');
+            indicatorsContainer.children[currentSlide].classList.remove('active');
+            currentSlide = index;
+            slides[currentSlide].classList.add('active');
+            indicatorsContainer.children[currentSlide].classList.add('active');
+        }
+
+        function changeSlide(dir) {
+            let next = currentSlide + dir;
+            if (next < 0) next = totalSlides - 1;
+            if (next >= totalSlides) next = 0;
+            goToSlide(next);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter') {
+                e.preventDefault();
+                changeSlide(1);
+            }
+            if (e.key === 'ArrowLeft' || e.key === 'Backspace') {
+                e.preventDefault();
+                changeSlide(-1);
+            }
+        });
+
+        // ── SCALE & CENTER PRESENTATION ──
+        function scaleToFit() {
+            const scaleX = window.innerWidth / 1920;
+            const scaleY = window.innerHeight / 1080;
+            const scale = Math.min(scaleX, scaleY);
+            const offsetX = (window.innerWidth - 1920 * scale) / 2;
+            const offsetY = (window.innerHeight - 1080 * scale) / 2;
+            document.body.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${scale})`;
+        }
+        scaleToFit();
+        window.addEventListener('resize', scaleToFit);
+
+    </script>
+
+</body>
+
+</html>
